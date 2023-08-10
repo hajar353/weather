@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/cloudy.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <nav id="mynavbar" class="navbar navbar-expand-lg navbar-dark text-white bg-dark pt-5 pb-5 ">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <div class="d-flex justify-content-center align-items-center ">
+                    <img src="./imgs/download.png" alt="Logo">
+
+                    <div class="logo  ms-3">
+                        <h6 class="p-0 m-0 fw-bold">Weather</h6>
+                        <p class="pt-2 mb-0">tagline goes here</p>
+                    </div>
+
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  d-flex justify-content-between">
+                    <li class="nav-item ms-2">
+                        <a class="nav-link active" class="position-relative" aria-current="page"
+                            href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-2 ">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="img overflow-hidden" style="background-color: #1E202B;">
+
+        <div class="container form ">
+            <input  type="text" placeholder="Find your location..." class="w-100 find" onkeyup="getWeather(this.value)">
+            <button>Find</button>
+        </div>
+
+
+
+
+        <div class="container weather p-5 mt-5">
+            <div class="row weather">
+                <div class="col-md-4 position-relative rounded-start-2 p-5 bg-1  h-40">
+                 
+                        <div
+                            class="position-absolute top-0 end-0 start-0 d-flex justify-content-between  rounded-top-start">
+                            <div id="dayOne"></div>
+                            <div id="dataDayOne"></div>
+                        </div>
+
+                        <h5 id="nameDayone"></h5>
+                        <div class="d-flex justify-content-around">
+                            <div><h1 id="tempDayOne"  class="text-white"></h1></div>
+                           <div id="iconDayOne"> </div>
+                        </div>
+                        <p id="textDayOne" style="color: #009ad8;"></p>
+
+                       <div class="icons">
+                        <span><i class="fa-solid fa-umbrella"></i> 20%</span>
+                        <span><i class="fa-solid fa-wind"></i> 18km/h</span>
+                        <span><i class="fa-solid fa-compass"></i> East</span>
+                       </div>
+
+                   
+                </div>
+
+
+
+
+
+                <div class="col-md-4 position-relative  p-5 bg-2  h-40">
+                 
+                    <div
+                        class="position-absolute top-0 end-0 start-0 d-flex justify-content-between content-center">
+                        <div id="dataTwoDayOne" class="m-auto"></div>
+                        
+                    </div>
+
+                 
+                    <div class="text-center mt-4 p-3">
+                       <div id="iconTwoDayOne"></div>
+                        <h5 id="maxTembDayOne"  class="text-white"></h5>
+                        <h6 id="minTembDayOne" ></h6>
+                        <p id="textTwoDayOne" style="color: #009ad8;"></p>
+                    </div>
+                  
+                
+
+               
+            </div>
+
+
+
+
+
+            
+
+            <div class="col-md-4 position-relative rounded-end-2 p-5 bg-1  h-40">
+                 
+                <div
+                    class="position-absolute top-0 end-0 start-0 d-flex justify-content-between  rounded-top-start ">
+                    <div id="dataDayTwo" class="m-auto"></div>
+                   
+                </div>
+
+             
+                <div class="text-center mt-4 p-3">
+                    <div id="iconDayTwo"></div>
+                    <h5 id="maxTemDayTwo" class="text-white"></h5>
+                    <h6 id="minTembDaytwo" ></h6>
+                    <p id="textDayTwo" style="color: #009ad8;"></p>
+                </div>
+
+           
+        </div>
+
+            
+             
+            </div>
+
+          
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 left position-relative mb-3">
+                    <input type="email" placeholder="Enter your email to subscribe..." class="w-100">
+                    <button>Subscribe</button>
+                </div>
+                <div class="col-md-4 right ">
+                    <div class="icon">
+
+                        <ul class="d-flex justify-content-center p-0 ">
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-pinterest"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <p> Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+
