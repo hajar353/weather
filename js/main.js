@@ -26,7 +26,7 @@ dataDayTwo.innerHTML=day[date.getDay()+2]
 
 async function getWeather(term){
 
-        var req=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=3a18549cc393457784d73703231008&q=${term}&days=7`,{method:'get'})
+        var req=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=3a18549cc393457784d73703231008&q=${term}&days=7`,{method:'get'})
         var res=await req.json()
 
  //......................col-1......................................................... 
@@ -40,16 +40,16 @@ async function getWeather(term){
        textDayOne.innerHTML=res.current.condition.text
        nameDayone.innerHTML=res.location.name
        tempDayOne.innerHTML=res.current.temp_c+'<sup>o</sup>C'
-       iconDayOne.innerHTML=`<img src=${res.current.condition.icon}>`  
+       iconDayOne.innerHTML=`<img src=${"https:"+res.current.condition.icon}>`  
  //......................col-2......................................................... 
 
        maxTembDayOne.innerHTML=res.forecast.forecastday[1].day.maxtemp_c+'<sup>o</sup>C'
        minTembDayOne.innerHTML=res.forecast.forecastday[1].day.mintemp_c+'<sup>o</sup>C'
-       iconTwoDayOne.innerHTML=`<img src=${res.forecast.forecastday[1].day.condition.icon}>`
+       iconTwoDayOne.innerHTML=`<img src=${"https:"+res.forecast.forecastday[1].day.condition.icon}>`
        textTwoDayOne.innerHTML=res.forecast.forecastday[1].day.condition.text
  //....................col-3............................................................
 
-       iconDayTwo.innerHTML=`<img src=${res.forecast.forecastday[2].day.condition.icon}>` 
+       iconDayTwo.innerHTML=`<img src=${"https:"+res.forecast.forecastday[2].day.condition.icon}>` 
        maxTemDayTwo.innerHTML=res.forecast.forecastday[2].day.maxtemp_c+'<sup>o</sup>C'
        minTembDaytwo.innerHTML=res.forecast.forecastday[2].day.mintemp_c+'<sup>o</sup>C'
        textDayTwo.innerHTML=res.forecast.forecastday[2].day.condition.text
@@ -72,19 +72,19 @@ async function getWeatherEgypt(){
    textDayOne.innerHTML=res.current.condition.text
    nameDayone.innerHTML=res.location.name
    tempDayOne.innerHTML=res.current.temp_c+'<sup>o</sup>C'
-   iconDayOne.innerHTML=`<img src=${res.current.condition.icon}>`  
+   iconDayOne.innerHTML=`<img src=${"https:"+res.current.condition.icon}>`  
   
 //......................col-2......................................................... 
 
    maxTembDayOne.innerHTML=res.forecast.forecastday[1].day.maxtemp_c+'<sup>o</sup>C'
    minTembDayOne.innerHTML=res.forecast.forecastday[1].day.mintemp_c+'<sup>o</sup>C'
-   iconTwoDayOne.innerHTML=`<img src=${res.forecast.forecastday[1].day.condition.icon}>`
+   iconTwoDayOne.innerHTML=`<img src=${"https:"+res.forecast.forecastday[1].day.condition.icon}>`
    textTwoDayOne.innerHTML=res.forecast.forecastday[1].day.condition.text
  
 //....................col-3............................................................
 
  
-   iconDayTwo.innerHTML=`<img src=${res.forecast.forecastday[2].day.condition.icon}>` 
+   iconDayTwo.innerHTML=`<img src=${"https:"+res.forecast.forecastday[2].day.condition.icon}>` 
    maxTemDayTwo.innerHTML=res.forecast.forecastday[2].day.maxtemp_c+'<sup>o</sup>C'
    minTembDaytwo.innerHTML=res.forecast.forecastday[2].day.mintemp_c+'<sup>o</sup>C'
    textDayTwo.innerHTML=res.forecast.forecastday[2].day.condition.text
