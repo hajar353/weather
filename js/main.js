@@ -58,7 +58,7 @@ async function getWeather(term){
 
 async function getWeatherEgypt(){
 
-    var req=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=3a18549cc393457784d73703231008&q=egypt&days=7`,{method:'get'})
+    var req=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=3a18549cc393457784d73703231008&q=egypt&days=7`,{method:'get'})
     var res=await req.json()
 
     var months=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
