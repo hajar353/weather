@@ -1,0 +1,26 @@
+@media screen and (max-width:700px) and (min-width:280px) {
+    
+    .form input{
+       padding: 10px;
+    }
+    .form button{
+        padding: 2px 20px !important;
+     }
+     .row input{
+        padding: 10px 15px;
+        width: 100%;
+     }
+     .row button{
+        padding: 2px 5px !important;
+        right: 9px;
+      
+     }
+     .left{
+        width: 100%;
+       
+        padding: 0;
+     }
+     footer{
+        padding: 20px 20px;
+     }
+}
