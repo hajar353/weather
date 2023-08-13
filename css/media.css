@@ -24,3 +24,27 @@
         padding: 20px 20px;
      }
 }
+
+@media screen and (max-width:914px) and (min-width:412px) {
+    
+   .form input{
+      padding: 15px;
+   }
+   .form button{
+       padding: 2px 40px !important;
+    }
+    .row input{
+       padding: 15px 15px;
+       width: 100%;
+    }
+    .row button{
+       padding: 2px 15px !important;
+       right: 5px;
+    }
+    .left{
+       padding: 0;
+    }
+    footer{
+       padding: 20px 20px;
+    }
+}
