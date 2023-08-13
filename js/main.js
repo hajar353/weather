@@ -22,7 +22,12 @@ var date= new Date()
 dayOne.innerHTML=day[date.getDay()]
 dataTwoDayOne.innerHTML=day[date.getDay()+1]
 dataDayTwo.innerHTML=day[date.getDay()+2]
-
+if(date.getDay()+1 > 6  ){
+   dataTwoDayOne.innerHTML=day[0]
+}
+if(date.getDay()+2 > 6){
+   dataDayTwo.innerHTML=day[1]
+}
 
 async function getWeather(term){
 
